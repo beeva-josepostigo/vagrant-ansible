@@ -8,11 +8,6 @@
       apt:
         update_cache: yes
 
-    - name: Install required packages
-      apt:
-        name: "{{ item }}"
-        state: present
-      with_items:
-        - apache2 
-        - mysql-server
-        - php5
+    - include: tasks/apache.yml
+    - include: tasks/mysql.yml
+    - include: tasks/php.yml
