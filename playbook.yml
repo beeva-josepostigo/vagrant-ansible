@@ -2,6 +2,9 @@
 # Run in all servers Ansible knows about
 - hosts: all
   become: true
+
+  vars:
+    document_root: /vagrant
   
   tasks:
     - name: Update cache
