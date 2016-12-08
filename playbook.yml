@@ -6,8 +6,7 @@
   tasks:
     - name: Update cache
       apt:
-        name: "*"
-        state: latest
+        update_cache: yes
 
     - name: Install Apache server
       apt:
