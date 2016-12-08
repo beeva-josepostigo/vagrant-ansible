@@ -1,12 +1,12 @@
 ---
 # Run in all servers Ansible knows about
 - hosts: all
-  sudo: true
+  become: true
   
   tasks:
     - name: Update cache
       apt:
-        name: *
+        name: "*"
         state: latest
 
     - name: Install Apache server
